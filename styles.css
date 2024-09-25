@@ -1,31 +1,8 @@
-.profile {
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #9e9e9e;
-    width: 300px;
-    margin: 0 auto;
-}
-
-.profile > img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-}
-
-.profile h2 {
-    font-size: 24px;
-    color: darkblue;
-}
-
-.profile p {
-    font-size: 16px;
-    color: gray;
-}
-
-.profile a {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: blue;
-    font-weight: bold;
+.gallery img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 4px solid #bbbaba; /* اضافه کردن حاشیه */
+    padding: 10px; /* فاصله داخلی */
 }
