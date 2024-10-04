@@ -1,8 +1,12 @@
-.gallery img {
-    display: block;
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    border: 4px solid #bbbaba; /* اضافه کردن حاشیه */
-    padding: 10px; /* فاصله داخلی */
+body{
+    background-color: burlywood;
+}
+p::first-line {
+    font-weight: bold; /* برجسته کردن خط اول */
+    color: darkblue;
+}
+
+::selection {
+    background-color: yellow; /* تغییر رنگ متن انتخاب شده */
+    color: black;
 }
