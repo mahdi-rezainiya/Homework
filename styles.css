@@ -1,12 +1,14 @@
-body{
-    background-color: burlywood;
-}
-p::first-line {
-    font-weight: bold; /* برجسته کردن خط اول */
-    color: darkblue;
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    z-index: 1000; /* قرار گرفتن بالای محتوا */
 }
 
-::selection {
-    background-color: yellow; /* تغییر رنگ متن انتخاب شده */
-    color: black;
+.content {
+    margin-top: 100px; /* فاصله از منو */
+    padding: 20px;
 }
