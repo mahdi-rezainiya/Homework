@@ -1,0 +1,129 @@
+:root {
+    --main-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --bg-color: #ecf0f1;
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav hero hero"
+        "nav content sidebar"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 400px auto auto;
+    gap: 10px;
+    height: 100vh;
+}
+
+.main-header {
+    grid-area: header;
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.main-nav {
+    grid-area: nav;
+    background-color: var(--accent-color);
+    padding: 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-section {
+    grid-area: hero;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.features {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+
+.feature {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.main-footer {
+    grid-area: footer;
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    body {
+        grid-template-areas:
+            "header"
+            "hero"
+            "content"
+            "sidebar"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 400px auto auto auto;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
